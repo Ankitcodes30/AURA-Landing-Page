@@ -1,6 +1,7 @@
 import React from 'react';
 import { DASHBOARD_URL } from '../config/constants';
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
+import dashboardPreviewImg from '../assets/dashboard-preview.png';
 
 export default function DashboardPreview() {
   const [ref, isVisible] = useScrollAnimation();
@@ -34,7 +35,7 @@ export default function DashboardPreview() {
               
               {/* Dashboard Image */}
               <img 
-                src="/src/assets/dashboard-preview.png.png" 
+                src={dashboardPreviewImg} 
                 alt="AURA Dashboard - Real-time Emergency Monitoring Interface" 
                 className="w-full h-auto transition-transform duration-500 group-hover:scale-[1.02]"
                 onError={(e) => {

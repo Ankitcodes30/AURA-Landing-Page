@@ -1,5 +1,6 @@
 import React from 'react';
 import { DASHBOARD_URL } from '../config/constants';
+import dashboardPreviewImg from '../assets/dashboard-preview.png';
 
 export default function Hero() {
   return (
@@ -83,7 +84,7 @@ export default function Hero() {
               <div className="relative bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl border border-white/20 rounded-2xl p-2 shadow-2xl">
                 <div className="bg-[#0B0F19]/50 rounded-xl overflow-hidden">
                   <img 
-                    src="/src/assets/dashboard-preview.png" 
+                    src={dashboardPreviewImg} 
                     alt="AURA Dashboard Preview" 
                     className="w-full h-auto"
                     onError={(e) => {
