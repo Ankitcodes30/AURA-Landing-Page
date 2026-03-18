@@ -1,4 +1,5 @@
 import React from 'react';
+import { DASHBOARD_URL, GITHUB_URL, LINKEDIN_URL, GITHUB_PROFILE_URL } from '../config/constants';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -50,7 +51,7 @@ export default function Footer() {
               </li>
               <li>
                 <a 
-                  href="http://localhost:5000"
+                  href={DASHBOARD_URL}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-gray-400 hover:text-primary transition-colors font-inter"
@@ -60,7 +61,7 @@ export default function Footer() {
               </li>
               <li>
                 <a 
-                  href="https://github.com/Ankitcodes30/AURA.git"
+                  href={GITHUB_URL}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-gray-400 hover:text-primary transition-colors font-inter"
@@ -83,7 +84,7 @@ export default function Footer() {
               </p>
               <div className="flex gap-3 pt-2">
                 <a
-                  href="https://github.com/Ankitcodes30"
+                  href={GITHUB_PROFILE_URL}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-10 h-10 bg-white/5 hover:bg-white/10 border border-white/10 hover:border-primary/50 rounded-lg flex items-center justify-center transition-all hover:scale-110"
@@ -94,7 +95,7 @@ export default function Footer() {
                   </svg>
                 </a>
                 <a
-                  href="https://linkedin.com/in/ankitkumbhare"
+                  href={LINKEDIN_URL}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-10 h-10 bg-white/5 hover:bg-white/10 border border-white/10 hover:border-primary/50 rounded-lg flex items-center justify-center transition-all hover:scale-110"
@@ -114,7 +115,7 @@ export default function Footer() {
             <ul className="space-y-3">
               <li>
                 <a 
-                  href="https://github.com/Ankitcodes30/AURA.git"
+                  href={GITHUB_URL}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-2 text-gray-400 hover:text-primary transition-colors font-inter group"
@@ -130,7 +131,7 @@ export default function Footer() {
               </li>
               <li>
                 <a 
-                  href="http://localhost:5000"
+                  href={DASHBOARD_URL}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-2 text-gray-400 hover:text-primary transition-colors font-inter group"
@@ -147,7 +148,7 @@ export default function Footer() {
               </li>
               <li>
                 <a 
-                  href="https://github.com/Ankitcodes30/AURA.git#readme"
+                  href={`${GITHUB_URL}#readme`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-gray-400 hover:text-primary transition-colors font-inter"
@@ -157,7 +158,7 @@ export default function Footer() {
               </li>
               <li>
                 <a 
-                  href="https://github.com/Ankitcodes30/AURA.git/issues"
+                  href={`${GITHUB_URL}/issues`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-gray-400 hover:text-primary transition-colors font-inter"
@@ -176,13 +177,13 @@ export default function Footer() {
               © {currentYear} AURA - AI Urban Response Assistant. All rights reserved.
             </p>
             <div className="flex items-center gap-6 text-sm">
-              <a href="#" className="text-gray-500 hover:text-primary transition-colors font-inter">
+              <a href="/privacy" className="text-gray-500 hover:text-primary transition-colors font-inter">
                 Privacy Policy
               </a>
-              <a href="#" className="text-gray-500 hover:text-primary transition-colors font-inter">
+              <a href="/terms" className="text-gray-500 hover:text-primary transition-colors font-inter">
                 Terms of Service
               </a>
-              <a href="#" className="text-gray-500 hover:text-primary transition-colors font-inter">
+              <a href="/contact" className="text-gray-500 hover:text-primary transition-colors font-inter">
                 Contact
               </a>
             </div>

@@ -1,4 +1,5 @@
 import React from 'react';
+import { DASHBOARD_URL } from '../config/constants';
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
 
 export default function Features() {
@@ -123,7 +124,7 @@ export default function Features() {
             Ready to transform your city's emergency response?
           </p>
           <a 
-            href="http://localhost:5000"
+            href={DASHBOARD_URL}
             target="_blank"
             rel="noopener noreferrer"
             className="px-8 py-4 bg-gradient-to-r from-primary to-purple-600 rounded-xl font-inter font-semibold hover:shadow-2xl hover:shadow-primary/50 transition-all hover:scale-105 inline-block text-white no-underline"

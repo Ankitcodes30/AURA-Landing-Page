@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { DASHBOARD_URL, GITHUB_URL } from '../config/constants';
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -55,7 +56,7 @@ export default function Navbar() {
               How It Works
             </button>
             <a
-              href="http://localhost:5000"
+              href={DASHBOARD_URL}
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-300 hover:text-primary transition-colors font-inter"
@@ -63,7 +64,7 @@ export default function Navbar() {
               Dashboard
             </a>
             <a
-              href="https://github.com/Ankitcodes30/AURA.git"
+              href={GITHUB_URL}
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-300 hover:text-white transition-colors font-inter"
@@ -71,7 +72,7 @@ export default function Navbar() {
               GitHub
             </a>
             <a 
-              href="http://localhost:5000"
+              href={DASHBOARD_URL}
               target="_blank"
               rel="noopener noreferrer"
               className="px-6 py-2.5 bg-gradient-to-r from-primary to-purple-600 rounded-lg font-inter font-semibold hover:shadow-lg hover:shadow-primary/50 transition-all hover:scale-105 text-white no-underline"
@@ -126,7 +127,7 @@ export default function Navbar() {
               How It Works
             </button>
             <a
-              href="http://localhost:5000"
+              href={DASHBOARD_URL}
               target="_blank"
               rel="noopener noreferrer"
               className="block w-full text-left text-gray-300 hover:text-white transition-colors font-inter"
@@ -134,7 +135,7 @@ export default function Navbar() {
               Dashboard
             </a>
             <a
-              href="https://github.com/Ankitcodes30/AURA.git"
+              href={GITHUB_URL}
               target="_blank"
               rel="noopener noreferrer"
               className="block text-gray-300 hover:text-white transition-colors font-inter"
@@ -142,7 +143,7 @@ export default function Navbar() {
               GitHub
             </a>
             <a 
-              href="http://localhost:5000"
+              href={DASHBOARD_URL}
               target="_blank"
               rel="noopener noreferrer"
               className="w-full px-6 py-2.5 bg-gradient-to-r from-primary to-purple-600 rounded-lg font-inter font-semibold hover:shadow-lg hover:shadow-primary/50 transition-all text-white no-underline text-center block"

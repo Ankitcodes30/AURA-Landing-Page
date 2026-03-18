@@ -1,4 +1,5 @@
 import React from 'react';
+import { GITHUB_URL } from '../config/constants';
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
 
 export default function TechStack() {
@@ -115,7 +116,7 @@ export default function TechStack() {
             {/* Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
-                href="https://github.com/Ankitcodes30/AURA.git"
+                href={GITHUB_URL}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group inline-flex items-center justify-center gap-3 px-8 py-4 bg-white text-gray-900 rounded-xl font-inter font-semibold text-lg hover:shadow-2xl hover:shadow-white/20 transition-all hover:scale-105"
