@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { Routes, Route, useLocation } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Features from './components/Features';
@@ -6,8 +7,20 @@ import HowItWorks from './components/HowItWorks';
 import DashboardPreview from './components/DashboardPreview';
 import TechStack from './components/TechStack';
 import Footer from './components/Footer';
+import DashboardPage from './components/DashboardPage';
 
-export default function App() {
+// Helper component to scroll to top on route change
+function ScrollToTop() {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  return null;
+}
+
+function LandingPage() {
   return (
     <div className="relative min-h-screen bg-[#0B0F19] text-white overflow-hidden">
       <Navbar />
@@ -58,3 +71,16 @@ export default function App() {
     </div>
   );
 }
+
+export default function App() {
+  return (
+    <>
+      <ScrollToTop />
+      <Routes>
+        <Route path="/" element={<LandingPage />} />
+        <Route path="/dashboard" element={<DashboardPage />} />
+      </Routes>
+    </>
+  );
+}
+

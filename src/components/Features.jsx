@@ -1,5 +1,5 @@
 import React from 'react';
-import { DASHBOARD_URL } from '../config/constants';
+import { Link } from 'react-router-dom';
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
 
 export default function Features() {
@@ -123,14 +123,12 @@ export default function Features() {
           <p className="text-gray-400 font-inter mb-6">
             Ready to transform your city's emergency response?
           </p>
-          <a 
-            href={DASHBOARD_URL}
-            target="_blank"
-            rel="noopener noreferrer"
+          <Link 
+            to="/dashboard"
             className="px-8 py-4 bg-gradient-to-r from-primary to-purple-600 rounded-xl font-inter font-semibold hover:shadow-2xl hover:shadow-primary/50 transition-all hover:scale-105 inline-block text-white no-underline"
           >
             Explore All Features
-          </a>
+          </Link>
         </div>
       </div>
     </section>
