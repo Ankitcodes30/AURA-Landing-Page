@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { DASHBOARD_URL, GITHUB_URL } from '../config/constants';
+import { Link } from 'react-router-dom';
+import { GITHUB_URL } from '../config/constants';
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -55,14 +56,12 @@ export default function Navbar() {
             >
               How It Works
             </button>
-            <a
-              href={DASHBOARD_URL}
-              target="_blank"
-              rel="noopener noreferrer"
+            <Link
+              to="/dashboard"
               className="text-gray-300 hover:text-primary transition-colors font-inter"
             >
               Dashboard
-            </a>
+            </Link>
             <a
               href={GITHUB_URL}
               target="_blank"
@@ -71,14 +70,12 @@ export default function Navbar() {
             >
               GitHub
             </a>
-            <a 
-              href={DASHBOARD_URL}
-              target="_blank"
-              rel="noopener noreferrer"
+            <Link 
+              to="/dashboard"
               className="px-6 py-2.5 bg-gradient-to-r from-primary to-purple-600 rounded-lg font-inter font-semibold hover:shadow-lg hover:shadow-primary/50 transition-all hover:scale-105 text-white no-underline"
             >
               Live Demo
-            </a>
+            </Link>
           </div>
 
           {/* Mobile Menu Button */}
@@ -126,14 +123,13 @@ export default function Navbar() {
             >
               How It Works
             </button>
-            <a
-              href={DASHBOARD_URL}
-              target="_blank"
-              rel="noopener noreferrer"
+            <Link
+              to="/dashboard"
+              onClick={() => setIsMobileMenuOpen(false)}
               className="block w-full text-left text-gray-300 hover:text-white transition-colors font-inter"
             >
               Dashboard
-            </a>
+            </Link>
             <a
               href={GITHUB_URL}
               target="_blank"
@@ -142,14 +138,13 @@ export default function Navbar() {
             >
               GitHub
             </a>
-            <a 
-              href={DASHBOARD_URL}
-              target="_blank"
-              rel="noopener noreferrer"
+            <Link 
+              to="/dashboard"
+              onClick={() => setIsMobileMenuOpen(false)}
               className="w-full px-6 py-2.5 bg-gradient-to-r from-primary to-purple-600 rounded-lg font-inter font-semibold hover:shadow-lg hover:shadow-primary/50 transition-all text-white no-underline text-center block"
             >
               Live Demo
-            </a>
+            </Link>
           </div>
         )}
       </div>

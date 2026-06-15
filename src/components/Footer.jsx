@@ -1,5 +1,6 @@
 import React from 'react';
-import { DASHBOARD_URL, GITHUB_URL, LINKEDIN_URL, GITHUB_PROFILE_URL } from '../config/constants';
+import { Link } from 'react-router-dom';
+import { GITHUB_URL, LINKEDIN_URL, GITHUB_PROFILE_URL } from '../config/constants';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -50,14 +51,12 @@ export default function Footer() {
                 </button>
               </li>
               <li>
-                <a 
-                  href={DASHBOARD_URL}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <Link 
+                  to="/dashboard"
                   className="text-gray-400 hover:text-primary transition-colors font-inter"
                 >
                   Dashboard
-                </a>
+                </Link>
               </li>
               <li>
                 <a 
@@ -130,10 +129,8 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                <a 
-                  href={DASHBOARD_URL}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <Link 
+                  to="/dashboard"
                   className="flex items-center gap-2 text-gray-400 hover:text-primary transition-colors font-inter group"
                 >
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -144,7 +141,7 @@ export default function Footer() {
                   <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
                   </svg>
-                </a>
+                </Link>
               </li>
               <li>
                 <a 
